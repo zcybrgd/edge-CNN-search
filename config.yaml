@@ -1,0 +1,43 @@
+data:
+  dataset: "cifar100"
+  data_dir: "./data"
+  num_classes: 100
+  batch_size: 128
+  num_workers: 4
+  input_size: 32
+
+teacher:
+  arch: "resnet50"
+  epochs: 60
+  lr: 0.1
+  weight_decay: 5e-4
+  momentum: 0.9
+  checkpoint: "checkpoints/teacher.pt"
+
+search:
+  population_size: 20
+  generations: 15
+  tournament_size: 5
+  proxy_train_epochs: 5
+  seed: 42
+  log_path: "results/search_log.json"
+  best_arch_path: "checkpoints/student_searched_arch.json"
+
+distillation:
+  epochs: 100
+  lr: 0.05
+  weight_decay: 5e-4
+  temperature: 4.0
+  alpha: 0.7                  # weight on distillation loss vs hard-label loss
+  checkpoint: "checkpoints/student_distilled.pt"
+
+pruning:
+  prune_ratio_per_step: 0.15  # fraction of channels removed per pruning round
+  num_prune_rounds: 3
+  finetune_epochs_per_round: 10
+  finetune_lr: 0.01
+  checkpoint: "checkpoints/student_pruned.pt"
+  report_path: "results/pruning_report.json"
+
+hardware:
+  name: "NVIDIA Jetson Orin Nano 8GB"
