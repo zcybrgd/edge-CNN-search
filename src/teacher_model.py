@@ -39,7 +39,7 @@ def train_teacher(cfg: dict):
     model = build_teacher(cfg["data"]["num_classes"]).to(device)
     log.info("Teacher params: %.2fM", count_params(model) / 1e6)
     tcfg = cfg["teacher"]
-    optimizer = torch.optim.SGD(model.parameters(), lr=tcfg["lr"], momentum=tcfg["momentum"],weight_decay=tcfg["weight_decay"], nesterov=True,)
+    optimizer = torch.optim.SGD(model.parameters(),lr=float(tcfg["lr"]), momentum=float(tcfg["momentum"]),weight_decay=float(tcfg["weight_decay"]),nesterov=True,)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=tcfg["epochs"])
     criterion = nn.CrossEntropyLoss()
 

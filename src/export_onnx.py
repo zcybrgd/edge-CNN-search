@@ -4,7 +4,7 @@ import yaml
 import torch
 import onnx
 from onnxsim import simplify
-from student_model import build_student
+from student_model import build_student_from_state_dict
 from search_space import ArchConfig
 from utils import setup_logging, load_checkpoint
 log = setup_logging(__name__)
@@ -14,7 +14,8 @@ def export(cfg: dict, out_path: str = "student_pruned.onnx"):
     device = "cpu" 
     with open(cfg["search"]["best_arch_path"]) as f:
         arch = ArchConfig.from_dict(json.load(f))
-    model = build_student(arch, cfg["data"]["num_classes"])
+    checkpoint = torch.load(cfg["pruning"]["checkpoint"], map_location=device)
+    model = build_student_from_state_dict(arch, cfg["data"]["num_classes"], checkpoint["state_dict"])
     load_checkpoint(model, cfg["pruning"]["checkpoint"], device=device)
     model.eval()
     input_size = cfg["data"]["input_size"]

@@ -40,7 +40,7 @@ def train_distillation(cfg: dict):
     student = build_student(arch, cfg["data"]["num_classes"]).to(device)
     log.info("Student params: %.2fM", count_params(student) / 1e6)
     dcfg = cfg["distillation"]
-    optimizer = torch.optim.SGD(student.parameters(), lr=dcfg["lr"], momentum=0.9,weight_decay=dcfg["weight_decay"], nesterov=True,)
+    optimizer = torch.optim.SGD(student.parameters(),lr=float(dcfg["lr"]),momentum=0.9,weight_decay=float(dcfg["weight_decay"]),nesterov=True,)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=dcfg["epochs"])
     best_acc = 0.0
     for epoch in range(dcfg["epochs"]):

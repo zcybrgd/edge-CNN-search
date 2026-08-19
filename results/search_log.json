@@ -1,0 +1,1422 @@
+[
+  {
+    "generation": 0,
+    "candidate_index": 0,
+    "fitness": 0.3552,
+    "params": 198300,
+    "flops": 12497920,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 3,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 3,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 64,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 1,
+    "fitness": 0.3733,
+    "params": 207380,
+    "flops": 17543424,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 3,
+          "out_channels": 16,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 48,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 48,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 2,
+    "fitness": 0.3964,
+    "params": 309468,
+    "flops": 23529216,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 1,
+          "out_channels": 32,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 48,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 64,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 24,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 16
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 3,
+    "fitness": 0.3617,
+    "params": 319420,
+    "flops": 32317696,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 2,
+          "out_channels": 16,
+          "expansion_ratio": 3,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 32,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 32,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 32,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 4,
+    "fitness": 0.4113,
+    "params": 347644,
+    "flops": 49282048,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 64,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 32,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 5,
+    "fitness": 0.4044,
+    "params": 290244,
+    "flops": 37401856,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 2,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 48,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 48,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 6,
+    "fitness": 0.432,
+    "params": 327124,
+    "flops": 22285312,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 2,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 48,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 7,
+    "fitness": 0.3659,
+    "params": 286236,
+    "flops": 30635904,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 1,
+          "out_channels": 32,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 16,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 16,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 32,
+          "expansion_ratio": 3,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 8,
+    "fitness": 0.3322,
+    "params": 331388,
+    "flops": 17264768,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 2,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 24,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 64,
+          "expansion_ratio": 3,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 9,
+    "fitness": 0.4343,
+    "params": 262396,
+    "flops": 33943808,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 3,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 64,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 32,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 3,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.0,
+      "stem_channels": 16
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 10,
+    "fitness": 0.3288,
+    "params": 229556,
+    "flops": 46460160,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 3,
+          "out_channels": 64,
+          "expansion_ratio": 3,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 11,
+    "fitness": 0.3778,
+    "params": 253316,
+    "flops": 29317632,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 1,
+          "out_channels": 64,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 48,
+          "expansion_ratio": 3,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 48,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 48,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 12,
+    "fitness": 0.3618,
+    "params": 192140,
+    "flops": 17242368,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 3,
+          "out_channels": 32,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 13,
+    "fitness": 0.3705,
+    "params": 209644,
+    "flops": 13331456,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 3,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 48,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 48,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 16,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.0,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 14,
+    "fitness": 0.4065,
+    "params": 259292,
+    "flops": 57931776,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 2,
+          "out_channels": 64,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 32,
+          "expansion_ratio": 3,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 64,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 15,
+    "fitness": 0.376,
+    "params": 265084,
+    "flops": 16064000,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 24,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 64,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 16,
+    "fitness": 0.3478,
+    "params": 423972,
+    "flops": 51317760,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 3,
+          "out_channels": 32,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 64,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 16
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 17,
+    "fitness": 0.3502,
+    "params": 282788,
+    "flops": 25098240,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 3,
+          "out_channels": 32,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 48,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 64,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 18,
+    "fitness": 0.3558,
+    "params": 216324,
+    "flops": 15455488,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 64,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 32,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 16
+    }
+  },
+  {
+    "generation": 0,
+    "candidate_index": 19,
+    "fitness": 0.3889,
+    "params": 288844,
+    "flops": 30322688,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 2,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 48,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 3,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 64,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 16
+    }
+  },
+  {
+    "generation": 1,
+    "fitness": 0.3771,
+    "params": 262396,
+    "flops": 33943808,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 3,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 64,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 32,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 3,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.0,
+      "stem_channels": 16
+    }
+  },
+  {
+    "generation": 2,
+    "fitness": 0.3439,
+    "params": 289804,
+    "flops": 35562496,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 24,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 32,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 3,
+    "fitness": 0.3787,
+    "params": 318444,
+    "flops": 32720640,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 1,
+          "out_channels": 32,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 48,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 64,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 24,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 4,
+    "fitness": 0.4507,
+    "params": 319636,
+    "flops": 22165504,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 2,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 48,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 5,
+    "fitness": 0.3939,
+    "params": 240812,
+    "flops": 19333632,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 48,
+          "expansion_ratio": 3,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 48,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 48,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 6,
+    "fitness": 0.4109,
+    "params": 348300,
+    "flops": 33828096,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 1,
+          "out_channels": 32,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 48,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 64,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 7,
+    "fitness": 0.4063,
+    "params": 322612,
+    "flops": 25212928,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 3,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 48,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 8,
+    "fitness": 0.4483,
+    "params": 324916,
+    "flops": 25802752,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 3,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 48,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 9,
+    "fitness": 0.2787,
+    "params": 260188,
+    "flops": 33856256,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 3,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 64,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 32,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.0,
+      "stem_channels": 16
+    }
+  },
+  {
+    "generation": 10,
+    "fitness": 0.4108,
+    "params": 343556,
+    "flops": 28970240,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 1,
+          "out_channels": 32,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 48,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 64,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 11,
+    "fitness": 0.3907,
+    "params": 259292,
+    "flops": 57931776,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 2,
+          "out_channels": 64,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 32,
+          "expansion_ratio": 3,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 64,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 0.75,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 12,
+    "fitness": 0.428,
+    "params": 277492,
+    "flops": 18841600,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 2,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 48,
+          "expansion_ratio": 3,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 13,
+    "fitness": 0.3779,
+    "params": 348300,
+    "flops": 33828096,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 1,
+          "out_channels": 32,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 1
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 48,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 64,
+          "expansion_ratio": 4,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 24,
+          "expansion_ratio": 4,
+          "kernel_size": 3,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 32
+    }
+  },
+  {
+    "generation": 14,
+    "fitness": 0.4261,
+    "params": 349332,
+    "flops": 29767680,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 2,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 3,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 48,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 24
+    }
+  },
+  {
+    "generation": 15,
+    "fitness": 0.4346,
+    "params": 334484,
+    "flops": 25966592,
+    "arch": {
+      "stages": [
+        {
+          "num_blocks": 2,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 3,
+          "stride": 1
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 24,
+          "expansion_ratio": 6,
+          "kernel_size": 3,
+          "stride": 2
+        },
+        {
+          "num_blocks": 2,
+          "out_channels": 48,
+          "expansion_ratio": 6,
+          "kernel_size": 5,
+          "stride": 2
+        },
+        {
+          "num_blocks": 1,
+          "out_channels": 16,
+          "expansion_ratio": 2,
+          "kernel_size": 5,
+          "stride": 2
+        }
+      ],
+      "width_mult": 1.25,
+      "stem_channels": 24
+    }
+  }
+]
