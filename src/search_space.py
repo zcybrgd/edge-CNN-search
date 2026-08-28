@@ -5,11 +5,11 @@ from typing import List
 
 @dataclass
 class StageConfig:
-    num_blocks: int        # depth of this stage
-    out_channels: int       # base output channels (before width multiplier)
-    expansion_ratio: int    # inverted residual expansion factor
-    kernel_size: int        # 3 or 5
-    stride: int             # stride of the first block in the stage (downsampling)
+    num_blocks: int # depth of this stage
+    out_channels: int  # base output channels (before width multiplier)
+    expansion_ratio: int # inverted residual expansion factor
+    kernel_size: int  # 3 or 5
+    stride: int  # stride of the first block in the stage (downsampling)
 
 
 @dataclass
@@ -45,13 +45,6 @@ def sample_random_arch(rng: random.Random) -> ArchConfig:
 
 
 def mutate_arch(arch: ArchConfig, rng: random.Random) -> ArchConfig:
-    """
-    Single-mutation operator: picks one mutable field across the whole
-    architecture and resamples it. This is deliberately a *small*
-    perturbation (regularized-evolution style) rather than resampling
-    the whole architecture, since large jumps waste proxy-training budget
-    on architectures unrelated to the current good candidate.
-    """
     import copy
     new_arch = copy.deepcopy(arch)
     mutation_type = rng.choice(["depth", "channels", "expansion", "kernel", "width_mult", "stem"])
@@ -72,13 +65,3 @@ def mutate_arch(arch: ArchConfig, rng: random.Random) -> ArchConfig:
     elif mutation_type == "stem":
         new_arch.stem_channels = rng.choice(STEM_CHANNEL_CHOICES)
     return new_arch
-
-
-"""
-Defines a small, discrete architecture search space built from MobileNetV2-style inverted residual blocks. The search operates over:
-  - number of blocks per stage (depth)
-  - expansion ratio per stage (width within a block)
-  - kernel size per stage (3 or 5)
-  - a global width multiplier (scales all channel counts)
-This is order of thousands of possible configs, not the combinatorial explosion of full NAS so that evolutionary search with cheap proxy training is tractable on a GTX 1650 Ti
-"""

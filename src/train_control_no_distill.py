@@ -63,8 +63,8 @@ def compare_to_distillation(cfg: dict, control_acc: float):
     delta = distilled_acc - control_acc
     log.info("--- Distillation effect ---")
     log.info("No-distillation control accuracy: %.4f", control_acc)
-    log.info("Distilled student accuracy:       %.4f", distilled_acc)
-    log.info("Delta from distillation:          %+.4f", delta)
+    log.info("Distilled student accuracy:  %.4f", distilled_acc)
+    log.info("Delta from distillation: %+.4f", delta)
     with open("results/distillation_effect.json", "w") as f:
         json.dump({"control_acc": control_acc,"distilled_acc": distilled_acc, "delta": delta,}, f, indent=2)
 

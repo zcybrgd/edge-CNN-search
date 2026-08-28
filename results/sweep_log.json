@@ -4,5 +4,11 @@
     "alpha": 0.5,
     "best_acc": 0.6608,
     "final_acc": 0.6608
+  },
+  {
+    "temperature": 2.0,
+    "alpha": 0.7,
+    "best_acc": 0.6686,
+    "final_acc": 0.6686
   }
 ]

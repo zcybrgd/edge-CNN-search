@@ -7,29 +7,51 @@
   "rounds": [
     {
       "round": 1,
-      "params": 253589,
-      "flops": 16354112,
-      "acc_pre_finetune": 0.1417,
-      "acc_post_finetune": 0.6664
+      "params": 253082,
+      "flops": 18601124,
+      "acc_pre_finetune": 0.4916,
+      "acc_post_finetune": 0.676
     },
     {
       "round": 2,
-      "params": 202414,
-      "flops": 12069616,
-      "acc_pre_finetune": 0.0708,
-      "acc_post_finetune": 0.6417
+      "params": 210990,
+      "flops": 16114636,
+      "acc_pre_finetune": 0.239,
+      "acc_post_finetune": 0.6597
     },
     {
       "round": 3,
-      "params": 162436,
-      "flops": 8887048,
-      "acc_pre_finetune": 0.0274,
-      "acc_post_finetune": 0.6101
+      "params": 159976,
+      "flops": 13062896,
+      "acc_pre_finetune": 0.1662,
+      "acc_post_finetune": 0.6341
     }
   ],
+  "sensitivity": {
+    "Conv2d_0": 0.017187500000000022,
+    "Conv2d_1": 0.017187500000000022,
+    "Conv2d_2": -0.0015624999999999112,
+    "Conv2d_3": 0.03750000000000009,
+    "Conv2d_4": 0.0031250000000000444,
+    "Conv2d_5": 0.0,
+    "Conv2d_6": 0.06718750000000007,
+    "Conv2d_7": 0.015625,
+    "Conv2d_8": 0.03750000000000009,
+    "Conv2d_9": 0.05625000000000002,
+    "Conv2d_10": 0.017187500000000022,
+    "Conv2d_11": 0.015625,
+    "Conv2d_12": 0.05937500000000007,
+    "Conv2d_13": 0.014062500000000089,
+    "Conv2d_14": 0.028125000000000067,
+    "Conv2d_15": 0.025000000000000022,
+    "Conv2d_16": 0.025000000000000022,
+    "Conv2d_17": 0.04062500000000002,
+    "Conv2d_18": 0.05937500000000007,
+    "Conv2d_19": -0.014062499999999978
+  },
   "after": {
-    "params": 162436,
-    "flops": 8887048,
-    "acc": 0.6101
+    "params": 159976,
+    "flops": 13062896,
+    "acc": 0.6341
   }
 }

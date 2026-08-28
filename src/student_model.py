@@ -1,5 +1,3 @@
-import math
-import torch
 import torch.nn as nn
 from search_space import ArchConfig
 
@@ -12,9 +10,9 @@ def _make_divisible(v: float, divisor: int = 8) -> int:
 
 
 class InvertedResidualBlock(nn.Module):
-    def __init__(self, in_channels: int, out_channels: int, expansion_ratio: int,kernel_size: int, stride: int, hidden_dim: int = None):
+    def __init__(self, in_channels: int, out_channels: int, expansion_ratio: int,kernel_size: int, stride: int):
         super().__init__()
-        hidden_dim = hidden_dim or in_channels * expansion_ratio
+        hidden_dim = in_channels * expansion_ratio
         self.use_residual = (stride == 1 and in_channels == out_channels)
         padding = kernel_size // 2
         layers = []
@@ -30,27 +28,20 @@ class InvertedResidualBlock(nn.Module):
 
 
 class SlimNetStudent(nn.Module):
-    def __init__(self, arch: ArchConfig, num_classes: int, stem_channels_override: int = None, block_channels_override: list = None, block_hidden_channels_override: list = None, head_channels_override: int = None):
+    def __init__(self, arch: ArchConfig, num_classes: int):
         super().__init__()
-        stem_channels = stem_channels_override or _make_divisible(arch.stem_channels * arch.width_mult)
+        stem_channels = _make_divisible(arch.stem_channels * arch.width_mult)
         self.stem = nn.Sequential(nn.Conv2d(3, stem_channels, 3, stride=1, padding=1, bias=False),nn.BatchNorm2d(stem_channels),nn.ReLU6(inplace=True),)
         blocks = []
         in_channels = stem_channels
         for stage in arch.stages:
-            default_out_channels = _make_divisible(stage.out_channels * arch.width_mult)
-            for stage_block_idx in range(stage.num_blocks):
-                stride = stage.stride if stage_block_idx == 0 else 1
-                if block_channels_override is None:
-                    out_channels = default_out_channels
-                    hidden_channels = None
-                else:
-                    block_idx = len(blocks)
-                    out_channels = block_channels_override[block_idx]
-                    hidden_channels = block_hidden_channels_override[block_idx]
-                blocks.append(InvertedResidualBlock(in_channels, out_channels, stage.expansion_ratio,stage.kernel_size, stride, hidden_channels))
+            out_channels = _make_divisible(stage.out_channels * arch.width_mult)
+            for block_idx in range(stage.num_blocks):
+                stride = stage.stride if block_idx == 0 else 1
+                blocks.append(InvertedResidualBlock(in_channels, out_channels, stage.expansion_ratio,stage.kernel_size, stride,))
                 in_channels = out_channels
         self.blocks = nn.Sequential(*blocks)
-        final_channels = head_channels_override or _make_divisible(1280 * max(arch.width_mult, 1.0))
+        final_channels = _make_divisible(1280 * max(arch.width_mult, 1.0))
         self.head_conv = nn.Sequential(nn.Conv2d(in_channels, final_channels, 1, bias=False),nn.BatchNorm2d(final_channels),nn.ReLU6(inplace=True),)
         self.pool = nn.AdaptiveAvgPool2d(1)
         self.classifier = nn.Linear(final_channels, num_classes)
@@ -74,26 +65,6 @@ class SlimNetStudent(nn.Module):
         x = self.head_conv(x)
         x = self.pool(x).flatten(1)
         return self.classifier(x)
-
-
-def build_student_from_state_dict(arch: ArchConfig, num_classes: int, state_dict: dict) -> nn.Module:
-    """Rebuild a model whose channels were physically reduced by pruning."""
-    block_channels = []
-    block_hidden_channels = []
-    block_idx = 0
-    while f"blocks.{block_idx}.block.3.weight" in state_dict:
-        block_hidden_channels.append(state_dict[f"blocks.{block_idx}.block.3.weight"].shape[0])
-        block_channels.append(state_dict[f"blocks.{block_idx}.block.6.weight"].shape[0])
-        block_idx += 1
-
-    return SlimNetStudent(
-        arch,
-        num_classes,
-        stem_channels_override=state_dict["stem.0.weight"].shape[0],
-        block_channels_override=block_channels,
-        block_hidden_channels_override=block_hidden_channels,
-        head_channels_override=state_dict["head_conv.0.weight"].shape[0],
-    )
 
 
 def build_student(arch: ArchConfig, num_classes: int) -> nn.Module:

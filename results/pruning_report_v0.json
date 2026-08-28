@@ -1,0 +1,35 @@
+{
+  "before": {
+    "params": 319636,
+    "flops": 22165504,
+    "acc": 0.6969
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "params": 253589,
+      "flops": 16354112,
+      "acc_pre_finetune": 0.1417,
+      "acc_post_finetune": 0.6664
+    },
+    {
+      "round": 2,
+      "params": 202414,
+      "flops": 12069616,
+      "acc_pre_finetune": 0.0708,
+      "acc_post_finetune": 0.6417
+    },
+    {
+      "round": 3,
+      "params": 162436,
+      "flops": 8887048,
+      "acc_pre_finetune": 0.0274,
+      "acc_post_finetune": 0.6101
+    }
+  ],
+  "after": {
+    "params": 162436,
+    "flops": 8887048,
+    "acc": 0.6101
+  }
+}
