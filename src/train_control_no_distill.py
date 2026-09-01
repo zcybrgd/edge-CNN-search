@@ -77,21 +77,3 @@ if __name__ == "__main__":
         cfg = yaml.safe_load(f)
     control_acc = train_control(cfg)
     compare_to_distillation(cfg, control_acc)
-
-
-"""
-Trains the SAME searched architecture (from search/best_arch_path) using
-plain supervised learning on hard labels only -- no teacher, no soft
-targets. This is the baseline needed to actually claim distillation
-helped: without this number, "the distilled student got 61% accuracy"
-is uninterpretable -- you don't know if the architecture would have
-gotten 61% on its own, or 40%, or 65%.
-
-Same optimizer, schedule, and epoch budget as distillation.py's config
-(cfg["distillation"]) is used here too, so the only variable that
-differs between this run and distillation.py is the loss function
-(hard-label cross-entropy only, vs KD loss). Keeping everything else
-identical is what makes the comparison valid -- if the control used a
-different LR schedule or epoch count, any accuracy gap could be
-attributed to that instead of distillation itself.
-"""
